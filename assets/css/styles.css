@@ -28,7 +28,7 @@ body {
     position: relative;
 }
 
-@media only screen and (max-width: 375px){
+@media screen and (max-width: 400px) and (min-width: 300px){
     body {
         min-height: 100vh;
  
@@ -69,7 +69,15 @@ body {
     }
 
     .score-text-p {
-        font-size: .6em;
+        font-size: .7em;
+        margin-top: -140px;
+        margin-right: 10px; 
+        margin-left: -10px;
+        
+    }
+
+    .score {
+       margin-top: 100px;
     }
 
     .play {
