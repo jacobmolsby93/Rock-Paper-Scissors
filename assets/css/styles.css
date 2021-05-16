@@ -31,6 +31,7 @@ body {
 @media screen and (max-width: 400px) and (min-width: 300px){
     body {
         min-height: 100vh;
+        max-height: fit-content;
  
     }
 
@@ -64,34 +65,77 @@ body {
     
 
     .score-text {
-        width: 100px;
-        height: 50px;
+        font-size: 1em;
     }
 
-    .score-text-p {
+    .score .score-text-p {
         font-size: .7em;
-        margin-top: -140px;
-        margin-right: 10px; 
-        margin-left: -10px;
-        
+        height: 100px;
+        margin-top: -100px;
+        margin-right: 55px; 
+        margin-left: 0;   
+        width: 100%;
+ 
+
+    }
+
+    .score-text #you-win {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 5px;
+    }
+
+    .score-text #you-loose {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 2px; 
+    }
+
+    .score-text #draw {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 2px;
     }
 
     .score {
-       margin-top: 100px;
+       height: 40px;
+       margin-top: 0;
     }
 
     .play {
-        position: absolute;
-        right: 140px;
-        top: 600px;
+        visibility: hidden;
     }
-    .right, .left {
+    .left {
         display: none;
     }
+    div.right {
+        font-size: 1em;
+        height: 42.4px;
+        width: 100px; 
+        margin-right: 10px;
+        margin-top: 20px;
+    }   
+    #computer {
+        visibility: collapse;
+        width: 100px;
+    }
+
+    .right > #computer-pick {
+        font-size: 1.25em;
+        width: 100px;
+        height: 50px;
+        margin-top: -65px;
+
+    }
+
+
 
 
     .footer {
-        top: 1000px;
+        top: 680px;
     }
 
 
