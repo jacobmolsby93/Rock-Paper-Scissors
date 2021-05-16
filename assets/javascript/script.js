@@ -1,9 +1,4 @@
 // Global-Scope variables
-let yourScore = 0;
-let computerScore = 0;
-let yourScoreP = document.getElementsByClassName('score-point-you');
-let computerScoreP = document.getElementsByClassName('score-point-computer');
-let scoreBox = document.getElementsByClassName('score-text');
 let scoreTextWin = document.getElementById('you-win');
 let scoreTextLoose = document.getElementById('you-loose');
 let drawText = document.getElementById('draw');
@@ -41,19 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  *  Function for making computer selecting a random choice. 
  */
-function randomComputerChoice(selectHand) { 
+function randomComputerChoice(runGame) { 
     let random = Math.floor(Math.random() * choicesArray.length);
+    computerPick.innerHTML = `${choicesArray[random]}!!`;
     
-    let buttons = document.getElementsByTagName('button');
 
-    for(let button of buttons) { 
-        button.addEventListener('click', function() {
-            if(this.getAttribute('data-type') == 'rock' || 'paper' || 'scissors' || 'lizard' || 'spock') {
-              computerPick.innerHTML = `${choicesArray[random]}!!`;   
-            }
-        })
-    }
-    
+     console.log(choicesArray[random]); 
     return choicesArray[random];   
 }
 randomComputerChoice();

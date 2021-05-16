@@ -28,6 +28,67 @@ body {
     position: relative;
 }
 
+@media only screen and (max-width: 375px){
+    body {
+        min-height: 100vh;
+ 
+    }
+
+    .upper {
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    #lizard {
+        top: 120px;
+    }
+
+    #scissors {
+        left: 20px;
+    }
+
+    #spock {
+        right: 20px;
+    }
+
+
+    .lower {
+        position: absolute;
+        top: 240px;
+    }
+
+    .title-text {
+        font-size: 1.8em;
+    }
+    
+
+    .score-text {
+        width: 100px;
+        height: 50px;
+    }
+
+    .score-text-p {
+        font-size: .6em;
+    }
+
+    .play {
+        position: absolute;
+        right: 140px;
+        top: 600px;
+    }
+    .right, .left {
+        display: none;
+    }
+
+
+    .footer {
+        top: 1000px;
+    }
+
+
+}
+
 .img {
     width: 80%;
     height: 80%;
