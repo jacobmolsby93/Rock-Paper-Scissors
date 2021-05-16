@@ -16,6 +16,9 @@ const lizard = document.getElementById('lizard');
 const spock = document.getElementById('spock');
 let choicesArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
+/**
+ * Function for the different buttons in the game and for the DOM to be loaded before the game begins.
+ */
 function selectHand() {
 document.addEventListener('DOMContentLoaded', function() {
     let buttons = document.getElementsByTagName('button');
@@ -35,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 }
 
+/**
+ *  Function for making computer selecting a random choice. 
+ */
 function randomComputerChoice(selectHand) { 
     let random = Math.floor(Math.random() * choicesArray.length);
     
@@ -42,7 +48,7 @@ function randomComputerChoice(selectHand) { 
 
     for(let button of buttons) { 
         button.addEventListener('click', function() {
-            if(this.getAttribute('data-type') === 'rock' && 'paper' && 'scissors' && 'lizard' && 'spock') {
+            if(this.getAttribute('data-type') == 'rock' || 'paper' || 'scissors' || 'lizard' || 'spock') {
               computerPick.innerHTML = `${choicesArray[random]}!!`;   
             }
         })
@@ -52,7 +58,9 @@ function randomComputerChoice(selectHand) { 
 }
 randomComputerChoice();
 
-
+/**
+ * Function for defining what operator beats what.
+ */
 function runGame(selectHand) {
     let computerHand = randomComputerChoice();
 
@@ -97,13 +105,20 @@ function runGame(selectHand) {
 }
 runGame();
 
-    function win(selectHand, computerHand) {
+
+/**
+ * Function to define what will happen when user wins
+ */
+function win(selectHand, computerHand) {
     let oldScore = parseInt(document.getElementById('score-point-you').innerText);
     document.getElementById('score-point-you').innerText = ++oldScore;
     scoreTextWin.style = 'opacity: 1'; 
     setTimeout(function() {scoreTextWin.style = 'opacity: 0'}, 500);
 }
 
+/**
+ * Function to define what will happen when user looses
+ */
 function lose(computerHand, selectHand) {
     let oldScore = parseInt(document.getElementById('score-point-computer').innerText);
     document.getElementById('score-point-computer').innerText = ++oldScore;
@@ -111,12 +126,18 @@ function lose(computerHand, selectHand) {
     setTimeout(function() {scoreTextLoose.style = 'opacity: 0'}, 500);
 }
 
+
+/**
+ * Function for when score is equal to draw.
+ */
 function draw(computerHand, selectHand) {
     drawText.style = 'opacity: 1';
     setTimeout(function() {drawText.style = 'opacity: 0'}, 500);
 }
 
-
+/**
+ * Function for when user clicks on the different hands in the game.
+ */
 function main() {
         
         rock.addEventListener('click', function() {
