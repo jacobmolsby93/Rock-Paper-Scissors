@@ -245,13 +245,14 @@ body {
 
 /* Media querys for mobile version */
 @media screen and (max-width: 450px) and (min-width: 300px){
+
     body {
         min-height: 100vh;
+        overflow: hidden;
     }
 
-
     #lizard {
-        top: 120px;
+        top: 16.5vh;
     }
 
     #scissors {
@@ -303,7 +304,7 @@ body {
         font-size: 1.2em;
         position: absolute;
         bottom: 110px;
-        margin-top: 0;
+        margin-top: 40px;
         right: 10px;
     }
 
@@ -311,9 +312,41 @@ body {
         font-size: 1.2em;
         height: 40px;
         margin: 0;
+        margin-top: 40px;
         position: absolute;
         bottom: 110px;
         left: 10px;
+
+    }
+
+    @media screen and (max-width: 320px) {
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .title-text {
+            margin-top: 0;
+            padding-top: 1rem;
+        }
+
+        .option {
+            height: 120px;
+            width: 120px;
+        }
+        .lower {
+            top: 185px;
+        }
+
+        div.right {
+        font-size: 1em;
+        height: 42.4px;
+        width: 90px;
+        margin-right: 5px;
+        margin-top: 40%;
+    }   
+
+
 
     }
 
