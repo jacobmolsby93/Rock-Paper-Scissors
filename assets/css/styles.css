@@ -28,134 +28,6 @@ body {
     position: relative;
 }
 
-@media screen and (max-width: 450px) and (min-width: 300px){
-    body {
-        min-height: 100vh;
-    }
-
-    .upper {
-        width: 100%;
-        justify-content: center;
-        
-    }
-
-    #lizard {
-        top: 120px;
-    }
-
-    #scissors {
-        left: 20px;
-    }
-
-    #spock {
-        right: 20px;
-    }
-
-
-    .lower {
-        position: absolute;
-        top: 240px;
-    }
-
-    .title-text {
-        margin-top: 20px;
-        font-size: 1.8em;
-    }
-    
-
-    .score-text {
-        font-size: 1em;
-    }
-
-    .score-box {
-        width: 100%;
-        display: inline-block;
-        height: 50px;
-        margin-top: 0;
-        top: 100px;
-    }
-
-    div.score-right {
-        font-size: 1.2em;
-        position: absolute;
-        bottom: 110px;
-        margin-top: 0;
-        right: 10px;
-    }
-
-    div.score-left {
-        font-size: 1.2em;
-        height: 40px;
-        margin: 0;
-        position: absolute;
-        bottom: 110px;
-        left: 10px;
-
-    }
-
-    .score-text #you-win {
-        font-size: 1em;
-        padding: .6rem;
-        top: 20px;
-        left: 5px;
-    }
-
-    .score-text #you-loose {
-        font-size: 1em;
-        padding: .6rem;
-        top: 20px;
-        left: 2px; 
-    }
-
-    .score-text #draw {
-        font-size: 1em;
-        padding: .6rem;
-        top: 20px;
-        left: 2px;
-    }
-
-    .score {
-       height: 40px;
-       margin-top: 0;
-    }
-
-    .play {
-        visibility: hidden;
-    }
-    .left {
-        display: none;
-    }
-
-    div.right {
-        font-size: 1em;
-        height: 42.4px;
-        width: 100px; 
-        margin-right: 10px;
-        margin-top: 20px;
-    }   
-    #computer {
-        visibility: collapse;
-        width: 100px;
-    }
-
-    .right > #computer-pick {
-        font-size: 1.25em;
-        width: 100px;
-        height: 50px;
-        margin-top: -65px;
-
-    }
-
-
-
-
-    .footer {
-        margin-top: auto;
-        margin-bottom: -20px;
-    }
-
-
-}
 
 .img {
     width: 80%;
@@ -368,3 +240,177 @@ body {
     flex-flow: row-reverse;
     margin-right: 30px;
 }
+
+
+
+/* Media querys for mobile version */
+@media screen and (max-width: 450px) and (min-width: 300px){
+    body {
+        min-height: 100vh;
+    }
+
+
+    #lizard {
+        top: 120px;
+    }
+
+    #scissors {
+        left: 20px;
+    }
+
+    #spock {
+        right: 20px;
+    }
+
+
+    .lower {
+        position: absolute;
+        top: 240px;
+    }
+
+    .title-text {
+        margin-top: 20px;
+        font-size: 1.8em;
+    }
+    
+
+    .score-text {
+        font-size: 1em;
+    }
+
+    .score-box {
+        width: 100%;
+        display: inline-block;
+        height: 50px;
+        margin-top: 0;
+        top: 100px;
+    }
+
+    div.score-right {
+        font-size: 1.2em;
+        position: absolute;
+        bottom: 110px;
+        margin-top: 0;
+        right: 10px;
+    }
+
+    div.score-left {
+        font-size: 1.2em;
+        height: 40px;
+        margin: 0;
+        position: absolute;
+        bottom: 110px;
+        left: 10px;
+
+    }
+
+    .score-text #you-win {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 5px;
+    }
+
+    .score-text #you-loose {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 2px; 
+    }
+
+    .score-text #draw {
+        font-size: 1em;
+        padding: .6rem;
+        top: 20px;
+        left: 2px;
+    }
+
+    .score {
+       height: 40px;
+       margin-top: 0;
+    }
+
+    .play {
+        visibility: hidden;
+    }
+    .left {
+        display: none;
+    }
+
+    div.right {
+        font-size: 1em;
+        height: 42.4px;
+        width: 100px; 
+        margin-right: 10px;
+        margin-top: 20px;
+    }   
+    #computer {
+        visibility: collapse;
+        width: 100px;
+    }
+
+    .right > #computer-pick {
+        font-size: 1.25em;
+        width: 100px;
+        height: 50px;
+        margin-top: -65px;
+
+    }
+
+
+
+
+    .footer {
+        margin-top: auto;
+        margin-bottom: -20px;
+    }
+
+
+}
+
+
+/* Media querys for ipad// Middle sized screens */
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+
+    .title-text {
+        margin-top: 30px;
+    }
+
+    div.score-right {
+        font-size: 2em;
+        position: absolute;
+        margin-top: 0;
+        right: 10px;
+    }
+
+    div.score-left {
+        font-size: 2em;
+        height: 40px;
+        margin: 0;
+        position: absolute;
+        left: 10px;
+    }
+
+    p.score-text-p {
+        margin-top: 110px;
+    }
+
+    .score-text {
+        margin-top: 150px;
+    }
+
+    div.right, div.left {
+        margin-top: 50px;
+    }
+
+    .options {
+        margin-top: 20px;
+    }
+
+    .footer {
+        margin-bottom: -30px;
+    }
+
+}
+
