@@ -255,13 +255,25 @@ body {
     }
 
     #scissors {
-        left: 20px;
+        left: 5vw;
     }
 
     #spock {
-        right: 20px;
+        right: 5vw;
     }
 
+    #rock {
+        left: 5vw;
+    }
+
+    #paper {
+        right: 5vw;
+    }
+
+    .upper {
+        position: absolute;
+        top: 2px;
+    }
 
     .lower {
         position: absolute;
@@ -276,6 +288,7 @@ body {
 
     .score-text {
         font-size: 1em;
+        top: 20%;
     }
 
     .score-box {
@@ -341,8 +354,9 @@ body {
         font-size: 1em;
         height: 42.4px;
         width: 100px; 
+        
         margin-right: 10px;
-        margin-top: 20px;
+        margin-top: 47.5%;
     }   
     #computer {
         visibility: collapse;
