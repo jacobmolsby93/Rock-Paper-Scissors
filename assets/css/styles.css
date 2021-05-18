@@ -94,8 +94,8 @@ body {
 
 .score-box {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    
+    justify-content: space-between;
     margin-top: 100px;
 }
 
@@ -108,13 +108,14 @@ body {
 #score-point-you {
     color: #3cf92f;
     margin-left: .5rem;
+    width: 100%;
 }
 
 #score-point-computer {
     color: #f92f3b;
     margin-left: .5rem;
-
 }
+
 
 .score-text {
     display: flex;

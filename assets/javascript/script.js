@@ -14,6 +14,7 @@ let choicesArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 /**
  * Function for the different buttons in the game and for the DOM to be loaded before the game begins.
  */
+
 function selectHand() {
 document.addEventListener('DOMContentLoaded', function() {
     let buttons = document.getElementsByTagName('button');
@@ -27,24 +28,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 empty.innerHTML = `${option}!!`;
                 empty.style = 'opacity: 1';
                 runGame(selectHand);
-            }
-        })
-    }
-})
+                
+                }  
+            })   
+        }
+    })
+
 }
 
 /**
  *  Function for making computer selecting a random choice. 
  */
-function randomComputerChoice(runGame) { 
+function randomComputerChoice() { 
     let random = Math.floor(Math.random() * choicesArray.length);
-    computerPick.innerHTML = `${choicesArray[random]}!!`;
-    
+    computerPick.textContent = `${choicesArray[random]}!!`;
 
-     console.log(choicesArray[random]); 
     return choicesArray[random];   
 }
-randomComputerChoice();
+
+
+
+
+
 
 /**
  * Function for defining what operator beats what.
@@ -91,7 +96,7 @@ function runGame(selectHand) {
         
     }
 }
-runGame();
+
 
 
 /**
@@ -107,7 +112,7 @@ function win(selectHand, computerHand) {
 /**
  * Function to define what will happen when user looses
  */
-function lose(computerHand, selectHand) {
+function lose(selectHand, computerHand) {
     let oldScore = parseInt(document.getElementById('score-point-computer').innerText);
     document.getElementById('score-point-computer').innerText = ++oldScore;
     scoreTextLoose.style = 'opacity: 1';
@@ -148,6 +153,7 @@ function main() {
         runGame("spock");
     })
     selectHand();
+
 
 }
 main();
