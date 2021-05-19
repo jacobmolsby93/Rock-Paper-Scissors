@@ -73,11 +73,9 @@ body {
 }
 
 .play {
-    display: flex;
     position: absolute;
-    justify-content: center;
-    align-items: center;
-    bottom: 25%;
+    left: 45%;
+    bottom: 20%;
     height: 40px;
     width: 100px;
     background-color: #291239;
@@ -86,6 +84,7 @@ body {
     border-radius: 20px;
     font-size: 1.25em;
     transition: .2s;
+    z-index: 1;
 }
 
 .play:hover {
@@ -93,22 +92,27 @@ body {
 }
 
 .score-box {
-    display: flex;
-    
-    justify-content: space-between;
-    margin-top: 100px;
+    position: absolute;
+    bottom: 130px;
+    width: 100%;
 }
 
-.score {
-    margin-top: 35vh;
-    margin-left: 2rem;
+.score-left {
+    float: left;
+    margin-left: 80px;
     font-size: 2em;
 }
+.score-right {
+    float: right;
+    margin-right: 80px;
+    font-size: 2em;
+}
+
+
 
 #score-point-you {
     color: #3cf92f;
     margin-left: .5rem;
-    width: 100%;
 }
 
 #score-point-computer {
@@ -161,13 +165,14 @@ body {
 #draw {
     display: flex;
     justify-content: center;
+    text-align: center;
     opacity: 0;
     position: absolute;
     top: 60px;
     font-size: 4em;
-    color: #19e0c8;
+    color: #12e3eb;
     border: 2px solid #ccc;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: .5rem;
 }
 
@@ -267,7 +272,9 @@ body {
     }
 
     #lizard {
-        top: 18vh;
+        display: flex;
+        align-items: center;
+        top: 120px;
     }
 
     #scissors {
@@ -448,17 +455,14 @@ body {
 
     div.score-right {
         font-size: 2em;
-        position: absolute;
-        margin-top: 0;
-        right: 10px;
+        display: flex;
+        align-items: center;
     }
 
     div.score-left {
         font-size: 2em;
-        height: 40px;
-        margin: 0;
-        position: absolute;
-        left: 10px;
+        display: flex;
+        align-items: center;
     }
 
     p.score-text-p {
