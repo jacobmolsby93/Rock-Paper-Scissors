@@ -78,31 +78,26 @@
         </div>
     </div>
 
-    <footer class ="footer">
+    <footer class="footer">
        <div id="left">
           <h3>Made By Jacob Molsby</h3> 
        </div>
        <div id=right>
             <form action="mailto:jmolsby@gmail.com" method="post" enctype="text/plain">
-            <div id="name-tag">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            </div>
-            <div id="email-tag">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="mail">
-            </div id="message-tag">
-            <label for="message">Message:</label>
-            <input type="text" id="message" name="message" size="50">
-            <span id="send">
-                <input type="submit" value="Send">
-            </span>
-            <span id="reset">
-                <input type="reset" value="Reset">
-            </span>
-         
+                
+                <div id="name-tag">
+                <input type="text" id="name" name="name" placeholder="Name:">
+                </div>
+
+                <div id="email-tag">
+                <input type="text" id="email" name="mail" placeholder="Email:">
+                </div id="message-tag">
+
+                <input type="text" id="message" name="message" size="50" placeholder="Message:">
+                <br>
+                <input type="submit" id="send" value="Send">
+                <input type="reset" id="reset" value="Reset">
             </form>
-        </form>
        </div> 
        
     </footer>
