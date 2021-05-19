@@ -197,7 +197,7 @@ body {
     margin-right: 20px;
     margin-top: 30px;
     opacity: 1;
-    max-width: 800px;
+
 }
 
 #computer {
@@ -302,6 +302,19 @@ body {
     flex-flow: row-reverse;
     margin-right: 30px;
 }
+
+/* Media Query for big screen */
+
+@media screen and (min-width: 1200px){
+    .right, .score-right {
+        right: 200px;
+    }
+
+    .left, .score-left {
+        left: 200px;
+    }
+}
+
 
 /* Media Query for footer */
 
