@@ -17,7 +17,7 @@ let choicesArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 function selectHand() {
 document.addEventListener('DOMContentLoaded', function() {
-    let buttons = document.getElementsByTagName('button');
+    let buttons = document.getElementsByClassName('buttons');
 
     for(let button of buttons) { 
         button.addEventListener('click', function() {
@@ -158,5 +158,21 @@ function main() {
 }
 main();
 
+/**
+ *  Function for sending email
+ */
 
+ function sendEmailForm(params) {
+     var emailParameters = {
+         from_name: document.getElementById('fromName').Value,
+         to_name: document.getElementById('toName').value,
+         message: document.getElementById('message').value
+     };
+
+     emailjs.send('jacobsgmail', 'template_sq8kkwq', emailParameters)
+     .then(function(res){
+         console.log("email sent", res.status);
+     })
+
+ }
 

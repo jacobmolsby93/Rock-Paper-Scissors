@@ -4,44 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
     <title>Rock | Paper | Scissors | Lizard | Spock</title>
 
+    <!--EmailJS integration-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+    emailjs.init("user_e4YZQwPhYrzbcCSGO1oK7");
+    })();
+    </script>
 </head>
 <body>
     <h1 class="title-text">Rock Paper Scissors Lizard Spock</h1>
 
+    <div class="overlay">
+        <button type="button"><i class="far fa-question-circle"></i></button>
+        <h2 class="information">Rules of the game</h2>
+        <p class="information-paragraph">There are 5 options to choose from in the game. The game objective is simple, to beat the computer in game of chance. 
+            In the list below you can see the different hands. what they are called and who beats who.
+        </p>
+        <ul>
+            <li>
+                <p>
+                    The clenched fist symbolizes - ROCK
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Beats: SCISSORS & LIZARD
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    The open palm symbolizes - PAPER
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Beats: ROCK & SPOCK
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    The hand showing a peace sign symbolizes - SCISSORS
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Beats: PAPER & LIZARD
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    The hand pinching symbolizes - LIZARD 
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Beats: PAPER & SPOCK
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    The last hand symbolizes - SPOCK
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            Beats: ROCK & SCISSORS
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
     <div class="options">
-        <div class="option upper" id="rock">
+        <div class="option upper buttons" id="rock">
             <button class ="btn" type="button" data-type="rock">
                 <img class="img" src="assets/images/rock.png" alt="Rock">
             </button>
         </div>
-        <div class="option upper" id="paper">
+        <div class="option upper buttons" id="paper">
             <button class ="btn" type="button" data-type="paper">
                 <img class="img" src="assets/images/paper.png" alt="Paper">
             </button>
         </div>
-        <div class="option lower" id="scissors">
+        <div class="option lower buttons" id="scissors">
             <button class ="btn" type="button" data-type="scissors">
                 <img class="img" src="assets/images/scissors.png" alt="Scissors">
             </button>
         </div>
-        <div class="option lower" id="lizard">
+        <div class="option lower buttons" id="lizard">
             <button class ="btn" type="button" data-type="lizard">
                 <img class="img" src="assets/images/lizard.png" alt="Lizard">  
             </button>
         </div>
-        <div class="option lower" id="spock">
+        <div class="option lower buttons" id="spock">
             <button class ="btn" type="button" data-type="spock">
                 <img class="img" src="assets/images/spock.png" alt="Spock">
             </button>
         </div>
     </div>
     
-    <div class="right">
+    <div class="right container">
         <h3 id="computer">
             Computer Rolled:
         </h3>
@@ -50,7 +129,7 @@
         </h3>
     </div>
     
-    <div class="left">
+    <div class="left container">
         <h3 id="user">
             You Picked:
         </h3>
@@ -83,20 +162,18 @@
           <h3>Made By Jacob Molsby</h3> 
        </div>
        <div id=right>
-            <form action="mailto:jmolsby@gmail.com" method="post" enctype="text/plain">
-                
+           <form>
                 <div id="name-tag">
-                <input type="text" id="name" name="name" placeholder="Name:">
+                <input type="text" id="toName" name="name" placeholder="Enter Your Name">
                 </div>
 
                 <div id="email-tag">
-                <input type="text" id="email" name="mail" placeholder="Email:">
+                <input type="text" id="fromName" name="mail" placeholder="Enter Your Email">
                 </div id="message-tag">
 
                 <input type="text" id="message" name="message" size="50" placeholder="Message:">
                 <br>
-                <input type="submit" id="send" value="Send">
-                <input type="reset" id="reset" value="Reset">
+                <button id="send">Send</button>
             </form>
        </div> 
        
@@ -105,3 +182,4 @@
     <script src="assets/javascript/script.js"></script>
 </body>
 </html>
+
