@@ -335,7 +335,6 @@ body {
 
     body {
         min-height: 100vh;
-        overflow: hidden;
     }
 
     #lizard {
@@ -414,8 +413,12 @@ body {
 
     }
 
-    #right form {
-       margin-right: 0;
+    #left {
+        left: 40%;
+    }
+
+    #message {
+        width: 90%;
     }
 
 
@@ -517,7 +520,9 @@ body {
 
     }
 
-
+    #right {
+        margin-right: 0;
+    }
 
 
     .footer {
@@ -559,6 +564,7 @@ body {
 
     div.right, div.left {
         margin-top: 50px;
+
     }
 
     .options {
@@ -566,7 +572,11 @@ body {
     }
 
     .footer {
-        margin-bottom: -30px;
+        margin-bottom: -40px;
+    }
+
+    .play {
+        bottom: 170px;
     }
 
 }
