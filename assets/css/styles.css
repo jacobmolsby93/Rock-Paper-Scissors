@@ -56,7 +56,6 @@ body {
     animation-duration: 300ms;
     animation-delay: 10ms;
     animation-timing-function: linear;
-    animation-iteration-count: 360deg;
 }
 @keyframes spin {
     from {transform:rotate(0deg);}
@@ -332,10 +331,6 @@ body {
 
 /* Media querys for mobile version */
 @media screen and (max-width: 450px) and (min-width: 320px){
-
-    body {
-        min-height: 100vh;
-    }
 
     #lizard {
         display: flex;

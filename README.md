@@ -1,7 +1,9 @@
 <h1> Rock Paper Scissors Lizzard Spock </h1>
 
 <p>
-
+My first ever project built with JavaScript, and HTML & CSS. But the logic in the game is built using JavaScript. The aim of this website is for YOU the user to play the game of rock paper scissors lizard spock against the computer.
+each of the hands you can pick can win against 2 others and beat 2 others. The game is simple but yet fun to play and i love the way that the design came out.
+In the future I want to implement a way for YOU to play against your friends in a online setting. A fun and easy way of settling an argument or deciding where to go eat lunch! 
 </p>
 
 
@@ -12,11 +14,6 @@
 Features 
 </h3>
 <hr>
-
-<p>
-Describe all the the different parts of the project with a sentece or two
-</p>
-
 
 <ul>
     <li>
@@ -75,13 +72,15 @@ Testing
 <hr>
 
 <p>
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The testing of this web-application was done solely by me.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+I have spent several hours on the project solving bugs which i have found along the way of completing it. The hardest part was to make the web-application responsive for all different screen sizes. Looking at it now in retrospect if I would do it again I would start with designing the game in the mobile version first and then adding on elements as the screen size grows bigger.
+When you enter the web-page it is clear what the objective is. You are greated with 5 options of hands. When you press the hand it spins and the computer will roll a option and you see in the two squares what you picked and what the computer picked aslong with who won.
+Making the squares was easy for desktop mode, but when deploying the site and checking how it looked on the mobile version they where way to big. 
+That lead to me deleting the square where it shows what you picked, and putting the computer pick square on the right side. I found that that is a crucial part of the game.
+on the left side in the mobile version you will see a small rectangle which will display if you have won, lost or drew a draw against the computer.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+The testing has been made for desktop mode, ipad and for mobile version. 
 </p>
 
 <h3>
@@ -90,30 +89,38 @@ Validator Testing
 
 <ul>
     <li>
+    <p><strong>HTML</strong></p> 
+        <ul>
+            <li>
+                <p>HTML W3 validator result</p>
+            </li>
+            <li>
+            <p>1 Error, which says "End tag had attributes" and shows d="message-tag">↩↩ (Not sure what it means)</p>
+            </li>
+            <li>
+            <p>2 warnings, which states Empty heading.</p>
+            <p>h3 id="computer-pick">↩↩</p>
+            <p>h3 id="user-pick">↩</p>
+            </li>
+        </ul>
     </li>
-
     <li>
+        <p><strong>CSS</strong></p>
+        <ul>
+            <li>
+                <p>W3 jigsaw result</p>
+            </li>
+            <li>
+                <p>parsing error</p>
+                <p>.score-box??{ width: 100%; height: 50px; margin-top: 0; top: 100px; }</p>
+            </li>
+        </ul>
     </li>
-
     <li>
         <ul>
             <li>
-                <ul>
-                    <li>
-                    </li>
-
-                    <li>
-                    </li>
-
-                    <li>
-                    </li>
-
-                    <li>
-                    </li>
-
-                    <li>
-                    </li>
-                </ul>
+            </li>
+            <li>
             </li>
         </ul>
     </li>
@@ -124,7 +131,10 @@ Unfixed Bugs
 </h3>
 
 <p>
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+The bugs i have found are that if you console log the computer-choice or pick in javascript, it returns 2 choices but that does not affect the scoring of the game. I have tried to resolve this but have not found a way to make it only show 1.
+Another bug i found in the beginning was that when entering the page, you could already see what the computer had picked. Which ultimately makes the game useless. But after going through my code i found that i had called the function 2 times one time when you click on the options and at another place which it wasn't suppose to be called.
+
+Aslong with these two bugs there is 1 more, on iphone x the square which displays you-win || you-loose || it's a draw is pushed down, which i find weird because it is just a little but smaller than the 6/7/8 plus version and on that screen it works well. dont know how to fix this without messing with the plus version.
 </p>
 
 <h2>
