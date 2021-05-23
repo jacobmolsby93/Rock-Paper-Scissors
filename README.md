@@ -197,4 +197,14 @@ Content
         The idea to use Switch case in my javaScript i got from this Youtube clip - <a href="https://youtu.be/jaVNP3nIAv0">https://youtu.be/jaVNP3nIAv0</a>
         </p>
     </li>
+    <li>
+        <p>
+        The selectHand function is from the Love maths project with code Institute but i remade parts of it. 
+        </p>
+    </li>
+    <li>
+        <p>
+        The overlay effect, i got help from <a href="https://www.w3schools.com/howto/howto_css_overlay.asp">w3 schools</a>
+        <p>
+    </li>
 </ul>
