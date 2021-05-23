@@ -7,7 +7,7 @@ In the future I want to implement a way for YOU to play against your friends in 
 </p>
 
 
-<img>
+<img src="https://i.ibb.co/X5q7T5p/Ska-rmavbild-2021-05-23-kl-09-52-52.png" alt="Image of Web-application" style="width: 100%">
 
 
 <h3>
@@ -42,7 +42,7 @@ Features
                 </p>
             </li>
         </ul>
-        <img>
+        <img src="https://i.ibb.co/RjLTN6g/Ska-rmavbild-2021-05-23-kl-10-02-58.png" alt="game area img" style="width: 100%">
     </li>
     <li>    
         <h4>        
@@ -117,10 +117,10 @@ Validator Testing
         </ul>
     </li>
     <li>
+        <p><strong>JavaScript</strong></p>
         <ul>
             <li>
-            </li>
-            <li>
+                <p>When running my javascript code through the JShint i get 32 warnings about the "let" and "const" that its for ES6 version of javascript</p>
             </li>
         </ul>
     </li>
