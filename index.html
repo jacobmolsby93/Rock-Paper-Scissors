@@ -20,77 +20,83 @@
 </head>
 <body>
     <h1 class="title-text">Rock Paper Scissors Lizard Spock</h1>
-
-    <div class="overlay">
-        <button type="button"><i class="far fa-question-circle"></i></button>
-        <h2 class="information">Rules of the game</h2>
-        <p class="information-paragraph">There are 5 options to choose from in the game. The game objective is simple, to beat the computer in game of chance. 
-            In the list below you can see the different hands. what they are called and who beats who.
-        </p>
-        <ul>
-            <li>
-                <p>
-                    The clenched fist symbolizes - ROCK
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            Beats: SCISSORS & LIZARD
-                        </p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>
-                    The open palm symbolizes - PAPER
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            Beats: ROCK & SPOCK
-                        </p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>
-                    The hand showing a peace sign symbolizes - SCISSORS
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            Beats: PAPER & LIZARD
-                        </p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>
-                    The hand pinching symbolizes - LIZARD 
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            Beats: PAPER & SPOCK
-                        </p>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p>
-                    The last hand symbolizes - SPOCK
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            Beats: ROCK & SCISSORS
-                        </p>
-                    </li>
-                </ul>
-            </li>
-
-        </ul>
+    
+    
+    <div id="overlay" onclick="off()">
+    <div id="text">          
+       <h2 class="information">Rules of the game</h2>
+            <p class="information-paragraph">There are 5 options to choose from in the game. The game objective is simple, to beat the computer in game of chance. 
+                In the list below you can see the different hands. what they are called and who beats who.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        The clenched fist symbolizes - ROCK
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Beats: SCISSORS & LIZARD
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        The open palm symbolizes - PAPER
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Beats: ROCK & SPOCK
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        The hand showing a peace sign symbolizes - SCISSORS
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Beats: PAPER & LIZARD
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        The hand pinching symbolizes - LIZARD 
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Beats: PAPER & SPOCK
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        The last hand symbolizes - SPOCK
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                Beats: ROCK & SCISSORS
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
     </div>
+</div>
+
+<div>
+  <button type="button" onclick="on()" id="info"><i class="far fa-question-circle"></i></button>
+</div>
+    
 
     <div class="options">
         <div class="option upper buttons" id="rock">

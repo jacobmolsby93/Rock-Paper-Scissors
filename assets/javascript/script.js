@@ -4,20 +4,22 @@ let scoreTextLoose = document.getElementById('you-loose');
 let drawText = document.getElementById('draw');
 let empty = document.getElementById('user-pick');
 let computerPick = document.getElementById('computer-pick');
+let choicesArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const lizard = document.getElementById('lizard');
 const spock = document.getElementById('spock');
-let choicesArray = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
 
 /**
  * Function for the different buttons in the game and for the DOM to be loaded before the game begins.
  */
 
-function selectHand() {
+function selectHand(selectHand) {
 document.addEventListener('DOMContentLoaded', function() {
-    let buttons = document.getElementsByClassName('buttons');
+    let buttons = document.getElementsByClassName('btn');
 
     for(let button of buttons) { 
         button.addEventListener('click', function() {
@@ -103,30 +105,48 @@ function runGame(selectHand) {
  * Function to define what will happen when user wins
  */
 function win(selectHand, computerHand) {
-    let oldScore = parseInt(document.getElementById('score-point-you').innerText);
+    var oldScore = parseInt(document.getElementById('score-point-you').innerText);
     document.getElementById('score-point-you').innerText = ++oldScore;
     scoreTextWin.style = 'opacity: 1'; 
     setTimeout(function() {scoreTextWin.style = 'opacity: 0'}, 500);
+
+
+    if (oldScore === 3) {
+        alert('CONGRATULATIONS YOU HAVE WON');
+        document.getElementById('score-point-you').innerText = oldScore = 0;
+        document.getElementById('score-point-computer').innerText = oldScoreComputer = 0;
+    } 
 }
 
 /**
  * Function to define what will happen when user looses
  */
 function lose(selectHand, computerHand) {
-    let oldScore = parseInt(document.getElementById('score-point-computer').innerText);
-    document.getElementById('score-point-computer').innerText = ++oldScore;
+    var oldScoreComputer = parseInt(document.getElementById('score-point-computer').innerText);
+    document.getElementById('score-point-computer').innerText = ++oldScoreComputer;
     scoreTextLoose.style = 'opacity: 1';
     setTimeout(function() {scoreTextLoose.style = 'opacity: 0'}, 500);
+
+    if(oldScoreComputer === 3){
+        alert('Sorry the computer beats you')
+        document.getElementById('score-point-you').innerText = oldScore = 0;
+        document.getElementById('score-point-computer').innerText = oldScoreComputer = 0;
+    }
+    
 }
 
 
 /**
  * Function for when score is equal to draw.
  */
-function draw(computerHand, selectHand) {
+function draw(selectHand, computerHand) {
     drawText.style = 'opacity: 1';
     setTimeout(function() {drawText.style = 'opacity: 0'}, 500);
+
 }
+
+
+
 
 /**
  * Function for when user clicks on the different hands in the game.
@@ -162,7 +182,7 @@ main();
  *  Function for sending email
  */
 
- function sendEmailForm(params) {
+ function sendEmailForm() {
      var emailParameters = {
          from_name: document.getElementById('fromName').Value,
          to_name: document.getElementById('toName').value,
@@ -175,4 +195,16 @@ main();
      })
 
  }
+
+ /**
+  *  Function for overlay 
+  */
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
 
